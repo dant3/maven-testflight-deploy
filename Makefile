@@ -12,7 +12,7 @@ build:
 	mkdir build
 
 build/TestFlightSDK_Android1.2.zip: build
-	@wget -c `cat link.url`
+	@wget -c `cat link.url` -P build
 
 build/TestFlightLib.jar: build/TestFlightSDK_Android1.2.zip
 	@unzip -o -qq -d build/ build/TestFlightSDK_Android1.2.zip
