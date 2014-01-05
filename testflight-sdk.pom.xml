@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.testflightapp</groupId>
     <artifactId>android-sdk</artifactId>
-    <version>1.2</version>
+    <version>1.3</version>
     <name>TestFlightLib</name>
     <url>https://www.testflightapp.com/sdk/download/</url>
 

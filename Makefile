@@ -5,17 +5,17 @@ all: download unpack install
 clean:
 	rm -Rf build
 
-download: build/TestFlightSDK_Android1.2.zip
+download: build/TestFlightSDK_Android1.3.zip
 unpack: download build/TestFlightLib.jar
 
 build:
 	mkdir build
 
-build/TestFlightSDK_Android1.2.zip: build
+build/TestFlightSDK_Android1.3.zip: build
 	@wget -c `cat link.url` -P build
 
-build/TestFlightLib.jar: build/TestFlightSDK_Android1.2.zip
-	@unzip -o -qq -d build/ build/TestFlightSDK_Android1.2.zip
+build/TestFlightLib.jar: build/TestFlightSDK_Android1.3.zip
+	@unzip -o -qq -d build/ build/TestFlightSDK_Android1.3.zip
 
 install-local: build/TestFlightLib.jar
 	@mvn deploy:deploy-file -DpomFile=testflight-sdk.pom.xml -Dfile=build/TestFlightLib.jar -DcreateChecksum=true
